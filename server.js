@@ -40,7 +40,7 @@ async function init()
         userId: "admin",
         email: "rishavbhattacharjee777@gmail.com",
         userType: "ADMIN",
-        password: "WELCOME1"
+        password: bcrypt.hashSync("WELCOME1",8) // 8 is the salt, higher value higher efficiency but slower
     });
     console.log(admin);
 
